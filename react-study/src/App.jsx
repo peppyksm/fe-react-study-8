@@ -6,6 +6,7 @@ import './App.css'
 import Basic01 from './conponents/basic01'
 import State01 from './conponents/State01'
 import Export01 from './conponents/export01'
+import Quiz01 from './quiz/Quiz01'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,8 @@ function App() {
   return (
     //<Basic01/>
     //<State01/>
-    <Export01 />
+    //<Export01 />
+    <Quiz01 />
   )
 }
 
