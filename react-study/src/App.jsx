@@ -13,6 +13,7 @@ import Probs02 from './components/Probs02'
 import Quiz01 from './quiz/Quiz01/Quiz01'
 import Quiz02 from './quiz/Quiz02/Quiz02'
 import Quiz03 from './quiz/Quiz03/Quiz03'
+import NewsBlog from './newsBlog/NewsBlog'
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
     // <Props01/>
     // <Quiz02/>
     // <Probs02/>
-    <Quiz03/>
+    // <Quiz03/>
+    <NewsBlog/>
   )
 }
 
