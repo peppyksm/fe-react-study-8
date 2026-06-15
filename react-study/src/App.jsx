@@ -10,6 +10,7 @@ import Quiz01 from './quiz/Quiz01'
 import State02 from './components/State02'
 import State03 from './components/State03'
 import Props01 from './components/Probs01'
+import Quiz02 from './quiz/Quiz02'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +22,8 @@ function App() {
     //<Quiz01 />
     //<State02/>
     // <State03/>
-    <Props01/>
+    // <Props01/>
+    <Quiz02/>
   )
 }
 

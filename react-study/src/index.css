@@ -109,3 +109,24 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 } */
+
+
+
+
+
+
+/* ==============Quiz02================== */
+
+.container{
+  text-align: center;
+}
+
+#btn{
+  border: solid 2px black;
+  padding: 0px;
+  font-size: 16px;
+}
+
+#btn:hover{
+  cursor: pointer;
+}
