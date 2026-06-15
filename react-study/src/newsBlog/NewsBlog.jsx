@@ -10,13 +10,13 @@ function NewsBlog() {
 
     let title = 'React Study'; //useState('React Study)
 
-    let [news1, setNews1] = useState('어제의 뉴스');
-    let [news2, setNews2] = useState('오늘의 뉴스');
-    let [news3, setNews3] = useState('내일의 뉴스');
+    // let [news1, setNews1] = useState('어제의 뉴스');
+    // let [news2, setNews2] = useState('오늘의 뉴스');
+    // let [news3, setNews3] = useState('내일의 뉴스');
 
     let [news, setNews] = useState(['어제의 뉴스', '오늘의 뉴스', '내일의 뉴스']);
 
-    let [likeCount, setLikeCount] = useState(0);
+    let [likeCount, setLikeCount] = useState([0, 0, 0]);
 
     let [modalFlag, setModalFlag] = useState(false);
 
@@ -28,7 +28,41 @@ function NewsBlog() {
                 <div style={{ color: "orange", fontSize: "20px" }}>{title}</div>
             </div>
 
-            <div className="post-list">
+            {
+                news.map((value, index) => {
+                    return (
+                        <div className="post-list" key={index}>
+                            <h4 onClick={() => {
+
+                                setModalFlag(!modalFlag);
+
+                            }}>{news[index]} <span onClick={(event) => {
+                                event.stopPropagation();
+
+                                let copy = [...likeCount];
+                                copy[index] = copy[index] + 1;
+                                setLikeCount(copy);
+
+                            }} >♥</span> {likeCount[index]}</h4>
+                            <p>내용 무</p>
+                        </div>
+                        
+                    )
+                })
+
+
+            }
+            {
+                modalFlag && <Modal />
+            }
+
+
+
+
+
+
+            {/* <div className="post-list">
+
                 <h4 onClick={() => {
                     // setModalFlag(true);
 
@@ -57,15 +91,15 @@ function NewsBlog() {
             <div className="post-list">
                 <h4>{news[2]}</h4>
                 <p>내용자리</p>
-            </div>
+            </div> */}
             {/* 
             {
                 modalFlag == true ? <Modal /> : null
             } */}
 
-            {
+            {/* {
                 modalFlag && <Modal />
-            }
+            } */}
 
 
 
